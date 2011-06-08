@@ -88,6 +88,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- lock
     , ((modMask .|. controlMask, xK_l     ), spawn "xscreensaver-command -lock")
 
+    -- run
     , ((modMask,               xK_p   ), spawn "dmenu_run")
 
     -- launch gmrun
@@ -156,6 +157,14 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 	, ((0, 0x1008ff13), spawn "sh ~/scripts/xmobar/volumeUp")
 	--XF86AudioLowerVolume
 	, ((0, 0x1008ff11), spawn "sh ~/scripts/xmobar/volumeDown")
+    --alarm app
+    , ((0, 0x1008ff46), spawn "/usr/bin/alarmclock")
+    --Amarok
+    , ((0, 0x1008ff45), spawn "/usr/bin/amarok")
+    --Kcalc
+    , ((0, 0x1008ff1d), spawn "/usr/bin/kcalc")
+    --show hotkeys
+    , ((0, 0x1008ff30), spawn "sh ~/scripts/xmonad/showKeys")
     ]
     ++
  
@@ -247,6 +256,7 @@ myManageHook = composeAll
     , className =? "Wow.exe"        --> doFloat
     , className =? "Wine"           --> doFloat
     , className =? "kmix"           --> doFloat
+    , className =? "xmessage"       --> doFloat
     , resource  =? "compose"        --> doFloat
 	, resource  =? "pyGust.py"		--> doFloat
 	, isFullscreen					--> doFullFloat

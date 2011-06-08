@@ -14,6 +14,6 @@ Config { font = "xft:DejaVu Sans Mono-8"
 
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "<fc=#e3170d>%StdinReader%</fc> }{ %vol% | %multicpu%  %memory%  <fc=#e3170d>%date%</fc> | %LGAV%"
+      , template = "<fc=#e3170d>%StdinReader%</fc> }{ %vol% | %multicpu%  %memory% .:. %date% | %LGAV%"
       }
 

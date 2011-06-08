@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xmessage -timeout 2 -file ~/scripts/xmonad/hotKeys
