@@ -80,7 +80,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,                 xK_i     ), spawn "iceweasel")
 
     -- take screenshot of the screen
-    , ((controlMask, xK_Print), spawn "scrot -u '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
+    , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
 
     -- take screenshot of the focused window
     , ((controlMask, xK_Print), spawn "scrot -u '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
