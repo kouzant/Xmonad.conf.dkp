@@ -77,7 +77,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
 	-- launch firefox
-    , ((modMask,                 xK_i     ), spawn "iceweasel")
+    , ((modMask,                 xK_i     ), spawn "firefox")
 
     -- take screenshot of the screen
     , ((0, xK_Print), spawn "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/screenshots/'")
@@ -261,7 +261,7 @@ myManageHook = composeAll
 	, resource  =? "pyGust.py"		--> doFloat
 	, isFullscreen					--> doFullFloat
     , className =? "Eclipse"        --> doFloat
-    , className =? "Iceweasel"      --> doShift "2"
+    , className =? "Firefox"      --> doShift "2"
     , className =? "chromium-browser" --> doShift "2"
     , className =? "Pidgin"         --> doShift "3"
     , className =? "Skype"         --> doShift "3"
