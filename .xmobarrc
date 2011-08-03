@@ -4,7 +4,7 @@ Config { font = "xft:DejaVu Sans Mono-8"
 	  , position = TopW L 90
       , lowerOnStart = True
 --      , commands = [Run Cpu ["-t", "<fc=#e3170d>Cpu</fc>: <total>", "-L","3","-H","50","--normal","#859900","--high","#FFB6B0"] 10
-      , commands = [Run MultiCpu ["-t","<fc=#e3170d>Cpu:</fc> <total0><total1>","-L","3","-H","50","--normal","#859900","--high","#FFB6B0","-w","5"] 10
+      , commands = [Run MultiCpu ["-t","<fc=#e3170d>Cpu:</fc> <total0><total1>","-L","3","-H","50","--normal","#859900","--high","#FFB6B0","-w","3"] 10
                    , Run Memory ["-t","<fc=#e3170d>Mem</fc>: <usedratio>%"] 10
                    , Run Date "%a %b %_d %H:%M" "date" 10
                    , Run Weather "LGAV" ["-t","<tempC>C","-L","64","-H","77"    ,"--normal","green","--high","red","--low","lightblue"] 3600

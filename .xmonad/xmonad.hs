@@ -261,6 +261,9 @@ myManageHook = composeAll
 	, resource  =? "pyGust.py"		--> doFloat
 	, isFullscreen					--> doFullFloat
     , className =? "Eclipse"        --> doFloat
+    , className =? "business-Draw"  --> doFloat
+    , className =? "java-lang-Thread"--> doFloat
+    , className =? "business-Main"  --> doFloat
     , className =? "Firefox"      --> doShift "2"
     , className =? "chromium-browser" --> doShift "2"
     , className =? "Pidgin"         --> doShift "3"
