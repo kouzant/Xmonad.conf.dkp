@@ -157,6 +157,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 	, ((0, 0x1008ff13), spawn "sh ~/scripts/xmobar/volumeUp")
 	--XF86AudioLowerVolume
 	, ((0, 0x1008ff11), spawn "sh ~/scripts/xmobar/volumeDown")
+    --XF86AudioPlay
+    , ((0, 0x1008ff14), spawn "mpc toggle")
     --alarm app
     , ((0, 0x1008ff46), spawn "/usr/bin/alarmclock")
     --Amarok

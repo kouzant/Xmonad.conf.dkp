@@ -9,11 +9,12 @@ Config { font = "xft:DejaVu Sans Mono-8"
                    , Run Date "%a %b %_d %H:%M" "date" 10
                    , Run Weather "LGAV" ["-t","<tempC>C","-L","64","-H","77"    ,"--normal","green","--high","red","--low","lightblue"] 3600
                    , Run PipeReader "/home/antonis/.xmobarVolFifo" "vol"
+                   , Run Com "mpc" ["current"] "mpc" 10
                    , Run StdinReader
                    ]
 
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "<fc=#e3170d>%StdinReader%</fc> }{ %vol% | %multicpu%  %memory% .:. %date% | %LGAV%"
+      , template = "<fc=#e3170d>%StdinReader%</fc> } <fc=#e77300>%mpc%</fc> { %vol% | %multicpu%  %memory% .:. %date% | %LGAV%"
       }
 
